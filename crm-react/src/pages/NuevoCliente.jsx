@@ -8,7 +8,7 @@ export async function action({request}){
     const datos = Object.fromEntries(formData)
     
     //Validacion
-    console.log()
+    console.log(datos)
     return{ok:true}
 }
 

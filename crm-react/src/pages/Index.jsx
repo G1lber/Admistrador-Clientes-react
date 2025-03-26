@@ -7,35 +7,35 @@ import Cliente from '../components/Cliente';
 export function loader(){
     const clientes =  [
         {
-            identificación : 1 ,
+            id : 1 ,
             nombre : 'Juan' ,
             teléfono : 1102013313 ,
             email : "juan@emtel.com" ,
             empresa : 'Emtel'
         } ,
         {
-            identificación : 2 ,
+            id : 2 ,
             nombre : 'Karen' ,
             teléfono : 1238198313 ,
             email : "karen@sena.com" ,
             empresa : 'SENA'
         } ,
         {
-            identificación : 3 ,
+            id : 3 ,
             nombre : 'Josue' ,
             teléfono : 341983913 ,
             email : "josue@sena.com" ,
             empresa : 'SENA'
         } ,
         {
-            identificación : 4 ,
+            id : 4 ,
             nombre : 'Miguel' ,
             teléfono : 319381983 ,
             email : "miguel@sena.com" ,
             empresa : 'SENA'
         } ,
         {
-            identificación : 5 ,
+            id : 5 ,
             nombre : 'Pedro' ,
             teléfono : 1398198938 ,
             email : "pedro@sena.com" ,
