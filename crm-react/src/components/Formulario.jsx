@@ -1,4 +1,4 @@
-const Formulario = ({cliente}) => {
+function Formulario ({cliente}) {
     return (
         <>
             <div className="mb-4">

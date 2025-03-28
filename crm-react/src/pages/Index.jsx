@@ -3,45 +3,11 @@ import {useLoaderData} from 'react-router-dom'
     la informacion es estatica 
 */
 import Cliente from '../components/Cliente';
+import { obtenerClientes } from '../data/clientes';
 
 export function loader(){
-    const clientes =  [
-        {
-            id : 1 ,
-            nombre : 'Juan' ,
-            teléfono : 1102013313 ,
-            email : "juan@emtel.com" ,
-            empresa : 'Emtel'
-        } ,
-        {
-            id : 2 ,
-            nombre : 'Karen' ,
-            teléfono : 1238198313 ,
-            email : "karen@sena.com" ,
-            empresa : 'SENA'
-        } ,
-        {
-            id : 3 ,
-            nombre : 'Josue' ,
-            teléfono : 341983913 ,
-            email : "josue@sena.com" ,
-            empresa : 'SENA'
-        } ,
-        {
-            id : 4 ,
-            nombre : 'Miguel' ,
-            teléfono : 319381983 ,
-            email : "miguel@sena.com" ,
-            empresa : 'SENA'
-        } ,
-        {
-            id : 5 ,
-            nombre : 'Pedro' ,
-            teléfono : 1398198938 ,
-            email : "pedro@sena.com" ,
-            empresa : 'SENA'
-        } ,
-    ] ;
+    
+    const clientes = obtenerClientes()
 
     return clientes
 }
