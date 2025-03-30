@@ -5,10 +5,8 @@ import { agregarCliente } from '../data/clientes'
 
 export async function action({request}){
     //Recupera los datos del request con formData() y los almacena
-    const formData = await request.formData() 
-    
+    const formData = await request.formData()   
     const datos = Object.fromEntries(formData)
-
     const email = formData.get('email')
     
     //Validacion

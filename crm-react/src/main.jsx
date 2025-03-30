@@ -7,7 +7,8 @@ import NuevoCliente, {action as nuevoClienteAction}from './pages/NuevoCliente'
 //Importamos y llamamos a la funcion loader para poder traer datos
 import Index, { loader as clientesLoader} from './pages/Index'
 import ErrorPage from './components/ErrorPage'
-import EditarCliente, {loader as editarCliente} from './pages/EditarCliente'
+import EditarCliente, {loader as editarCliente, action as editarClienteAction } from './pages/EditarCliente'
+import { action as eliminarClienteAction } from './components/Cliente'
 
 //Aqui se asignan las rutas
 const router = createBrowserRouter([
@@ -25,13 +26,19 @@ const router = createBrowserRouter([
       {
         path:'/clientes/nuevo',
         element: <NuevoCliente/>,
-        action: nuevoClienteAction
+        action: nuevoClienteAction,
+        errorElement: <ErrorPage />
       },
       {
         path:'/clientes/:clienteId/editar',
         element: <EditarCliente/>,
         loader: editarCliente,
+        action: editarClienteAction,
         errorElement: <ErrorPage />
+      },
+      {
+        path: '/clientes/:clienteId/eliminar',
+        action: eliminarClienteAction
       }
     ]
   },
